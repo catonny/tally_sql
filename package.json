@@ -20,6 +20,7 @@
     "@types/ws": "^8.18.1"
   },
   "dependencies": {
+    "odbc": "^3.2.1",
     "@azure/storage-file-datalake": "^12.26.0",
     "@google-cloud/bigquery": "^7.9.0",
     "js-yaml": "^4.1.0",

@@ -97,6 +97,19 @@ Both use the same back-end. File **run-gui.bat** uses browser-based interface wh
 
 <br><br>
 
+### Tally ODBC to PostgreSQL Cloner
+
+The GUI now includes a dedicated workflow for cloning Tally data that is exposed via the ODBC driver into a local PostgreSQL database. The page lets you:
+
+* Provide either a DSN or full ODBC connection string, along with optional credentials.
+* Discover the list of tables available over ODBC and choose which ones should be copied.
+* Configure the destination PostgreSQL connection, schema and SSL preference.
+* Enable realtime synchronisation by setting a polling interval that keeps the local database aligned with changes in Tally.
+
+When you click **Start Sync** the tool spawns a background worker that imports the selected tables and streams log messages back to the browser console via WebSockets. Realtime sync keeps the worker running and automatically re-triggers the import after every interval. You can stop the worker at any point with **Stop Sync**.
+
+<br><br>
+
 ## Tally XML Server
 Tally has in-built XML Server capability, which can import/export data in/out of Tally. This utility sends export command to Tally along with report specification written in TDL (Tally Developer Language) in XML format. In response, Tally returns back the requested data (in XML format), which is then imported into Database Server. 
 

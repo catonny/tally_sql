@@ -1,22 +1,23 @@
 {
-    "database": {
-        "technology": "mssql",
-        "server": "localhost",
-        "port": 0,
-        "ssl": false,
-        "schema": "tallydb",
-        "username": "sa",
-        "password": "admin",
-        "loadmethod": "file"
+    "odbc": {
+        "dsn": "TallyODBC64",
+        "connectionString": "",
+        "username": "",
+        "password": "",
+        "tables": []
     },
-    "tally": {
-        "definition": "tally-export-config.yaml",
-        "server": "localhost",
-        "port": 9000,
-        "fromdate": "2024-04-01",
-        "todate": "2025-03-31",
-        "sync": "full",
-        "frequency": 0,
-        "company": ""
+    "postgres": {
+        "host": "localhost",
+        "port": 5432,
+        "database": "tally_local",
+        "user": "postgres",
+        "password": "postgres",
+        "schema": "public",
+        "ssl": false
+    },
+    "sync": {
+        "realtime": false,
+        "intervalSeconds": 300,
+        "truncateBeforeInsert": true
     }
 }
